@@ -21,10 +21,10 @@ class _SplashScreenState extends State<SplashScreen> {
             width: 60,
             child: Lottie.asset("assets/animation/loading.json"),
           ),
-          SizedBox(
+          const SizedBox(
               // height: 20,
               ),
-          Text(
+          const Text(
             "Have a Caffe",
             style: TextStyle(
               fontFamily: 'mono',
@@ -36,7 +36,7 @@ class _SplashScreenState extends State<SplashScreen> {
       backgroundColor: Colors.white,
       splashTransition: SplashTransition.fadeTransition,
       duration: 4000,
-      nextScreen: LoginPage(),
+      nextScreen: const LoginPage(),
     );
   }
 }

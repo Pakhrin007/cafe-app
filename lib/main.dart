@@ -1,7 +1,9 @@
 import 'package:cafe/pages/forgot_password.dart';
+import 'package:cafe/pages/home_page.dart';
 import 'package:cafe/pages/login_page.dart';
 import 'package:cafe/pages/register_page.dart';
 import 'package:cafe/pages/splash_screen.dart';
+import 'package:cafe/utils/routes.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,9 +25,10 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         "/": (context) => const SplashScreen(),
-        "/login": (context) => LoginPage(),
-        "/register": (context) => RegisterPage(),
-        "/forgot_password": (context) => ForgotPassword(),
+        "/login": (context) => const LoginPage(),
+        "/register": (context) => const RegisterPage(),
+        "/forgot_password": (context) => const ForgotPassword(),
+        MyRoutes.HomeRoute: (context) => const HomePage(),
       },
     );
   }
