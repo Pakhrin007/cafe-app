@@ -28,7 +28,7 @@ class _SplashScreenState extends State<SplashScreen> {
             "Have a Caffe",
             style: TextStyle(
               fontFamily: 'mono',
-              fontSize: 14,
+              fontSize: 14z,
             ),
           )
         ],
