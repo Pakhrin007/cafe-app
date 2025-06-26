@@ -69,7 +69,36 @@ class _LoginPageState extends State<LoginPage> {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const Text("Forgot Password?"),
+                  const SizedBox(width: 8),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(
+                          context, MyRoutes.forgot_passwordRoute);
+                    },
+                    child: const Text(
+                      "Reset password",
+                      style: TextStyle(
+                        color: Colors.blue,
+                        decoration: TextDecoration.underline,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 5,
+            ),
+            const SizedBox(
               height: 20,
             ),
             Center(
@@ -79,7 +108,7 @@ class _LoginPageState extends State<LoginPage> {
                   foregroundColor: Colors.white,
                   padding: const EdgeInsets.only(
                       top: 12, left: 34, right: 34, bottom: 12),
-                  shape: RoundedRectangleBorder(
+                  shape: const RoundedRectangleBorder(
                     borderRadius: BorderRadius.only(
                         topLeft: Radius.circular(20),
                         bottomRight: Radius.circular(20)),
@@ -92,6 +121,32 @@ class _LoginPageState extends State<LoginPage> {
                   "Login",
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  Text("Don't Have an Account?"),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, MyRoutes.registerRoute);
+                    },
+                    child: Text(
+                      "SignUp",
+                      style: TextStyle(
+                          color: Colors.blue,
+                          decoration: TextDecoration.underline),
+                    ),
+                  )
+                ],
               ),
             )
           ],
